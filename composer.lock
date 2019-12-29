@@ -1,0 +1,56 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "05320a45329755667213a6641030b07e",
+    "packages": [
+        {
+            "name": "mazay98/parentheses",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Mazay98/parentheses.git",
+                "reference": "003ab8aa74623b87a15535762f85451fcda5cbfc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Mazay98/parentheses/zipball/003ab8aa74623b87a15535762f85451fcda5cbfc",
+                "reference": "003ab8aa74623b87a15535762f85451fcda5cbfc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Vladimir",
+                    "email": "zavolod@yandex.ru"
+                }
+            ],
+            "description": "library created with to check open parentheses to mathematical expression",
+            "time": "2019-12-12T06:43:52+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "mazay98/parentheses": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

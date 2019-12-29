@@ -1,0 +1,12 @@
+{
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Vladimir",
+      "email": "zavolod@yandex.ru"
+    }
+  ],
+  "require": {
+    "mazay98/parentheses": "dev-master"
+  }
+}
