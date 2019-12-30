@@ -1,5 +1,5 @@
 <?php
-    require_once "vendor\autoload.php";
+    require_once "vendor/autoload.php";
 
     $shortopts = "p:";
     $longopts = array(
@@ -48,13 +48,25 @@
             if ($buf == 'exit') {
                 break;
             }
+			
+			$array = [
+                '(',
+                ')',
+                ' ',
+                '\n',
+                '\t',
+                '\r',
+            ];
 
-            $talkback = "Log: Ваше выражение '$buf'.\n";
-            if ($par->isValid($buf)) {
-                $talkback .= "Log: Верно\n";
+            $data = str_replace($array,'',trim($buf));
+			
+			$talkback = "Log: Ваше выражение '$buf'.\n";
+            if (!empty($data)) {
+                $talkback.= "Log: " . "Не действительно!" . "\n";
             } else {
-                $talkback .= "Log: Не верно\n";
-            }
+				$talkback.= "Log: " . (string)$par->isValid($buf) . "\n";
+			}
+            	
 
             socket_write($msgsock, $talkback, strlen($talkback));
 

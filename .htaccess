@@ -1,0 +1,18 @@
+#AUTHORIZATION 
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile /home/vz/www/.htpasswd
+Require valid-user
+
+#DEFAULT CARSET
+AddDefaultCharset utf-8
+
+#ENABLE DISPLAY ERRORS
+php_flag display_errors on
+
+#INDEX.php MAIN file
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php
+
